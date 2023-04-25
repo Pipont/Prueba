@@ -1,0 +1,42 @@
+<div>
+    <div>
+        <h2>Contribuyente</h2>
+    </div>
+</div>
+
+<button routerLink="/new" mat-raised-button color="primary">Agregar Nuevo Empleado</button>
+<table mat-table [dataSource]="psDataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let item">
+            <span>{{item.psid}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let item">
+            <span>{{item.psname}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="ruc">
+        <th mat-header-cell *matHeaderCellDef>RUC</th>
+        <td mat-cell *matCellDef="let item">
+            <span>{{item.psrucContributor}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>Taxable Ammount</th>
+        <td mat-cell *matCellDef="let item">
+            <span>{{item.pstaxableAmmount}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="tax">
+        <th mat-header-cell *matHeaderCellDef>TAX</th>
+        <td mat-cell *matCellDef="let item">
+            <span>{{calculateTax(item.pstaxableAmmount)}}</span>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="psColumnsTable"></tr>
+    <tr mat-row *matRowDef="let row; columns: psColumnsTable;"></tr>
+</table>

@@ -1,0 +1,46 @@
+{
+  "contributors": [
+    {
+      "psid": 1,
+      "psname": "dedeed",
+      "psrucContributor": "15151212",
+      "pstaxableAmmount": 100000
+    },
+    {
+      "psid": 1,
+      "psname": "dedeed",
+      "psrucContributor": "15151212",
+      "pstaxableAmmount": 50000
+    },
+    {
+      "psid": 2,
+      "psname": "Lisaine",
+      "psrucContributor": "1",
+      "pstaxableAmmount": 50000
+    },
+    {
+      "psid": 3,
+      "psname": "Lisaine",
+      "psrucContributor": "1",
+      "pstaxableAmmount": 50000
+    },
+    {
+      "psid": 4,
+      "psname": "Lisaine",
+      "psrucContributor": "1",
+      "pstaxableAmmount": 50000
+    },
+    {
+      "psid": 5,
+      "psname": "Lisaine",
+      "psrucContributor": "1",
+      "pstaxableAmmount": 50000
+    },
+    {
+      "psid": 6,
+      "psname": "Lisaine",
+      "psrucContributor": "1",
+      "pstaxableAmmount": 50000
+    }
+  ]
+}

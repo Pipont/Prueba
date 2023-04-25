@@ -1,0 +1,53 @@
+<form [formGroup]="myForm" >
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput formControlName="id" > 
+    </mat-form-field>
+    <br>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput formControlName="name" placeholder="Insert name...">
+        <div *ngIf="myForm.get('name')?.hasError('required') && myForm.get('name')?.touched">
+            <span style="color:red;"> Este campo es obligatorio </span>
+        </div>
+    </mat-form-field>
+    <br>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>RUC</mat-label>
+        <input matInput formControlName="ruc" placeholder="Insert RUC...">
+        <div *ngIf="myForm.get('ruc')?.hasError('required') && myForm.get('ruc')?.touched">
+            <span style="color:red;"> Este campo es obligatorio </span>
+        </div>
+    </mat-form-field>
+
+    <br>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Taxeable Ammount</mat-label>
+        <input matInput formControlName="ammount" placeholder="Insert taxeable ammount..." (keyup)="calculateCtax($event)">
+        <div *ngIf="myForm.get('ammount')?.hasError('required') && myForm.get('ammount')?.touched">
+            <span style="color:red;"> Este campo es obligatorio </span>
+        </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Tax</mat-label>
+        <input matInput formControlName="tax" [value]="pstax" readonly="true">
+    </mat-form-field>
+    <br>
+    <br>
+
+
+    <button mat-raised-button color="primary" (click)="addContributor()" [disabled]="myForm.invalid">Guardar</button>
+    <span> - </span>
+    <button mat-raised-button color="secondary" (click)="backHome()">Cancelar</button>
+
+</form>
